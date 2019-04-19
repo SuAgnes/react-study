@@ -1,0 +1,20 @@
+React 16 版本以后被称作React Fiber
+因为在16版本中,react底层事件循环中,加入了优先级等级的概念。
+可以利用事件循环的碎片时间,执行一些高优先级的用户交互，提高react.js使用过程中的用户体验
+react相对vue可能灵活性更大一些,所以处理一些非常复杂的业务时,技术方案有更多一些的选择
+Vue有更丰富的API
+
+搭建开发环境
+Create-react-app:react官方脚手架
+npm install -g create-react-app
+create-react-app 项目名:创建项目
+npm start 运行项目
+
+yarn.lock 项目依赖
+readme.md 项目说明
+package.json 工具及项目介绍
+public>favicon.ico 网页图标
+public>index.html 项目首页模板
+public>manifest.json
+src>index.js 项目入口
+react里面有个概念 all in js: css也可以通过js嵌入
