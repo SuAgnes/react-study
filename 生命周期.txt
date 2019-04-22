@@ -1,0 +1,17 @@
+生命周期函数指在某一个时刻组件会自动调用的函数
+在组件即将被挂载到页面的时刻,执行componentWillMount函数,render前
+生命周期是针对于每个组件的
+在组件被挂载到页面之后,执行componentDidMount函数,render后
+initialzation: 初始化
+setup props and state: 做一些props和state的设置
+
+Mounting: 挂载页面
+componentWillMoun → render → componentWillMoun
+componentWillMoun和componentWillMoun只有在页面挂载时(组件第一次被放到页面上)执行
+
+Updation: 组件更新流程
+props: componentWillReceiveProps → shouleComponentUpdate(true: 继续向下执行, false: 停止执行) → componentWillUpdate → render → componentDidUpdate
+states: shouleComponentUpdate(true: 继续向下执行, false: 停止执行) → componentWillUpdate → render → componentDidUpdate
+
+Unmounting: 移除组件
+componentWillUnmount
