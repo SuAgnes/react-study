@@ -1,0 +1,33 @@
+.fade-enter {
+    /* 入场动画的第一个样式 */
+    opacity: 0;
+}
+.fade-enter-active {
+    /* 入场动画的第二个时刻到入场动画执行完成之前 */
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+.fade-enter-done {
+    /* 当整个动画执行完后 */
+    opacity: 1;
+}
+.fade-exit {
+    /* 出场动画的第一个样式 */
+    opacity: 1;
+}
+.fade-exit-active {
+    /* 出场动画的第二个时刻到出场动画执行完成之前 */
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+.fade-exit-done {
+    opacity: 0;
+}
+/* appear分割线 添加入场样式 入场时CSSTransition会自动帮我们加两个类名 用这两个类名操作初始样式*/
+.fade-enter, .fade-appear{
+    opacity: 0;
+}
+.fade-enter-active, .fade-appear-active{
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
