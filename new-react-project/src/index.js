@@ -39,6 +39,23 @@ import './index.css';
 // import TodoListSeven from './TodoListSeven';
 // ReactDOM.render(<TodoListSeven />, document.getElementById('root'));
 
-// 第八部分 - Redux中发送异步请求获取数据
-import TodoListEight from './TodoListEight';
-ReactDOM.render(<TodoListEight />, document.getElementById('root'));
+// // 第八部分 - Redux中发送异步请求获取数据 Redux-thunk
+// import TodoListEight from './TodoListEight';
+// ReactDOM.render(<TodoListEight />, document.getElementById('root'));
+
+// 第九部分 - Redux-saga
+// import TodoListNine from './TodoListNine';
+// ReactDOM.render(<TodoListNine />, document.getElementById('root'));
+
+// 第十部分 - React-redux
+import TodoListTen from './TodoListTen';
+import { Provider } from 'react-redux';
+import store from './storeReactRedux';
+
+const App = (
+  // Provider: 提供者, 连接store, 之后Provider内所有的组件都有能力获取到store里面的内容
+  <Provider store={store}>
+    <TodoListTen />
+  </Provider>
+)
+ReactDOM.render(App, document.getElementById('root'));

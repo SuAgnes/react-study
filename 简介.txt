@@ -31,3 +31,18 @@ react的函数式编程带来的好处就是用react写出来的项目更容易�
 react developer tools 开发者软件 查数据
 
 npm install redux-thunk 安装redux-thunk
+
+在 React 中另一个不同点是你不能通过返回 false 的方式阻止默认行为。你必须显式的使用 preventDefault 。
+
+function ActionLink() {
+  function handleClick(e) {
+    e.preventDefault();
+    console.log('The link was clicked.');
+  }
+
+  return (
+    <a href="#" onClick={handleClick}>
+      Click me
+    </a>
+  );
+}

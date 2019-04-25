@@ -21,11 +21,11 @@ class TodoItem extends Component {
   }
   componentWillReceiveProps(nextProps) {
     //   console.log('child componentWillReceiveProps: 接收到父组件的时候执行');
-    }
-    //当这个组件即将从页面中剔除的时候, 自动执行
-    componentWillUnmount() {
-    //   console.log('child componentWillUnmount: 当这个组件即将从页面中剔除的时候执行');
-    }
+  }
+  //当这个组件即将从页面中剔除的时候, 自动执行
+  componentWillUnmount() {
+  //   console.log('child componentWillUnmount: 当这个组件即将从页面中剔除的时候执行');
+  }
 
   constructor(props) {
     super(props);

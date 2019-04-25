@@ -21,7 +21,7 @@ export const initListAction = (data) => ({
 })
 
 
-// Redux指的是Action和Store之间: 之前说在Redux中Action只能是一个对象, 所以Action是一个对象直接派发给了Store
+// Redux中间件指的是Action和Store之间, 也就是Redux的中间件: 之前说在Redux中Action只能是一个对象, 所以Action是一个对象直接派发给了Store
 // 当我们使用了redux-thunk后, Action可以是函数了(Action通过dispatch方法被传递给Store, 所以Action和Store中间件指的就是对dispatch方法的封装, 或者说是对dispatch的升级)
 // 最原始的dispatch方法, 接收到一个对象后, 会把对象传递给store; 当对dispatch方法做了一个升级后, 当调用dispatch方法时, 给dispatch方法传递的是一个对象的话, 那么dispatch方法就会把对象直接传给store, 和原始的dispatch方法没有区别
 // 假设传给dispatch方法的是一个函数, 此时dispatch方法会把函数执行, 执行完毕后需要调用store时再去调用store, 所以说, 升级后的dispatch会根据参数的不同执行不同的事情
