@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { getInputValue, getAddItemAction, getDeleteItem } from './storeReactRedux/actionCreators';
 
@@ -35,7 +35,7 @@ const TodoListTen = (props) => {
         {
           list.map((item, index) => {
             return (
-              <li key={item} onClick={(index) => {handleDelete(index)}}>{item}</li>
+              <li key={item} onClick={() => {handleDelete(index)}}>{item}</li>
               // <li key={item}>{item}</li>
             )
           })
@@ -70,8 +70,6 @@ const mapDispatchToProps = (dispatch) => {
     },
     handleDelete(index) {
       const action = getDeleteItem(index);
-      console.log(index);
-      
       dispatch(action);
     }
   }
